@@ -1,7 +1,7 @@
 const path = require('path')
 const express = require('express')
 const morgan = require('morgan')
-const rendertron = require('rendertron-middleware')
+const prerender = require('prerender-node')
 
 const app = express()
 
@@ -18,9 +18,7 @@ const port = process.env.HTTP_PORT ? Number(process.env.HTTP_PORT) : 80
 app.use(express.static(STATIC, {
   index: false
 }))
-app.use(rendertron.makeMiddleware({
-  proxyUrl: process.env.RENDERTRON_URL
-}))
+app.use(prerender)
 app.get('*', function (req, res) {
   res.sendFile(INDEX)
 })

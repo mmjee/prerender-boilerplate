@@ -8,7 +8,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "morgan": "^1.10.0",
-    "rendertron-middleware": "https://infura-ipfs.io/ipfs/QmVgfRfFJcUgAQkGZd6D67Dx6dL3y9DnXo6UsP1nze4se4?filename=rendertron-middleware-flavor2.tar"
+    "prerender-node": "^3.4.1"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
