@@ -5,13 +5,9 @@ services:
       context: .
     restart: unless-stopped
     environment:
-      - RENDERTRON_URL=http://rendertron:3000/render
+      - PRERENDER_SERVICE_URL=http://rendertron:3000/
 
   rendertron:
-    build:
-      context: .
-      dockerfile: Dockerfile-rendertron
+    build: https://github.com/mmjee/prerender-alpine.git
     restart: unless-stopped
-    volumes:
-      - ./data/rt_cache/:/cache
 

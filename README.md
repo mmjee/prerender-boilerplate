@@ -1,11 +1,11 @@
-# A Rendertron Boilerplate for SPA projects
+# A Prerender Boilerplate for SPA projects
 
 Docker included :)
 
 ### How to use
 
 ```shell
-git clone --depth 1 https://github.com/mmjee/rendertron-boilerplate.git
+git clone --depth 1 https://github.com/mmjee/prerender-boilerplate.git
 git clone --depth 1 https://github.com/me/my-SPA.git
 $EDITOR Dockerfile
 $EDITOR docker-compose.yml
