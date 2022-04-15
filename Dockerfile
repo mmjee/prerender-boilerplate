@@ -5,7 +5,7 @@ COPY your-app-here/ .
 
 # Add your ENV stuff here
 
-RUN yarn install --prod && yarn cache clean --all
+RUN yarn install && yarn cache clean --all
 RUN yarn build
 
 FROM node:lts
