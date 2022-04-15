@@ -5,7 +5,7 @@ COPY your-app-here/ .
 
 # Add your ENV stuff here
 
-RUN yarn install
+RUN yarn install --prod && yarn cache clean --all
 RUN yarn build
 
 FROM node:lts
@@ -16,7 +16,7 @@ COPY package.json ./
 COPY yarn.lock ./
 COPY index.js ./
 
-RUN yarn install
+RUN yarn install --prod && yarn cache clean --all
 EXPOSE 80
 COPY --from=compiled /app/dist /app/frontend
 CMD ["node", "index.js"]
