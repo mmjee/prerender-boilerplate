@@ -14,7 +14,11 @@ const STATIC = path.resolve(__dirname, '/app/frontend')
 const INDEX = path.resolve(STATIC, 'index.html')
 const port = process.env.HTTP_PORT ? Number(process.env.HTTP_PORT) : 80
 
-// Let index be handled at line 24
+prerender.crawlerUserAgents.push('matrix')
+prerender.crawlerUserAgents.push('synapse')
+prerender.crawlerUserAgents.push('element')
+
+// Index is handled later
 app.use(express.static(STATIC, {
   index: false
 }))
