@@ -1,8 +1,0 @@
-{
-  "cache": "filesystem",
-  "cacheConfig": {
-    "cacheDurationMinutes": 7200,
-    "cacheMaxEntries": 1000,
-    "snapshotDir": "/cache"
-  }
-}
